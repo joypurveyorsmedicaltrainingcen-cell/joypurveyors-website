@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joy Purveyors Medical training Center | Ndagani, Chuka</title>
+<meta name="description" content="Joy Purveyors Medical Center in Ndagani, Chuka — outpatient and inpatient care, dentistry, maternity, laboratory and diagnostics, and general consultations.">
+<style>
+  :root{
+    --blue-deep:#14567A;
+    --blue-deep-dark:#0F425F;
+    --blue-soft:#E7F1F6;
+    --pink-accent:#D97A98;
+    --pink-tint:#FBEEF2;
+    --ink:#1B2A32;
+    --ink-soft:#4B5D66;
+    --white:#FFFFFF;
+    --line:#D8E4E9;
+    --radius:6px;
+    --max-width:1100px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  img{max-width:100%;display:block;}
+
+  a{color:var(--blue-deep);}
+
+  .wrap{
+    max-width:var(--max-width);
+    margin:0 auto;
+    padding:0 20px;
+  }
+
+  h1,h2,h3{
+    font-weight:600;
+    line-height:1.25;
+    margin:0 0 .5em 0;
+    color:var(--blue-deep-dark);
+  }
+
+  p{margin:0 0 1em 0;color:var(--ink-soft);}
+  p:last-child{margin-bottom:0;}
+
+  section{padding:64px 0;}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(255,255,255,.96);
+    border-bottom:1px solid var(--line);
+    backdrop-filter:saturate(180%) blur(6px);
+  }
+
+  .nav-bar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 0;
+  }
+
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:var(--blue-deep-dark);
+  }
+
+  .brand-mark{
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--blue-deep) 55%, var(--pink-accent) 55%);
+    flex-shrink:0;
+  }
+
+  .brand-text{
+    font-weight:600;
+    font-size:1.05rem;
+    line-height:1.15;
+  }
+
+  .brand-text small{
+    display:block;
+    font-weight:400;
+    font-size:.72rem;
+    color:var(--ink-soft);
+    letter-spacing:.02em;
+  }
+
+  nav ul{
+    list-style:none;
+    display:flex;
+    gap:28px;
+    margin:0;
+    padding:0;
+  }
+
+  nav a{
+    text-decoration:none;
+    color:var(--ink);
+    font-size:.95rem;
+    font-weight:400;
+    padding:6px 0;
+    border-bottom:2px solid transparent;
+    transition:border-color .15s ease, color .15s ease;
+  }
+
+  nav a:hover, nav a:focus-visible{
+    color:var(--blue-deep);
+    border-bottom-color:var(--pink-accent);
+  }
+
+  .nav-toggle{
+    display:none;
+    background:none;
+    border:none;
+    cursor:pointer;
+    padding:8px;
+  }
+
+  .nav-toggle span{
+    display:block;
+    width:24px;
+    height:2px;
+    background:var(--blue-deep-dark);
+    margin:5px 0;
+    transition:transform .2s ease, opacity .2s ease;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:var(--blue-soft);
+    padding:72px 0 64px;
+  }
+
+  .hero-inner{
+    max-width:640px;
+    animation:fadeUp .6s ease both;
+  }
+
+  @keyframes fadeUp{
+    from{opacity:0; transform:translateY(12px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .hero-inner{animation:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  .eyebrow-loc{
+    font-size:.92rem;
+    color:var(--ink-soft);
+    margin-bottom:14px;
+  }
+
+  .eyebrow-loc::before{
+    content:"📍 ";
+  }
+
+  .hero h1{
+    font-size:2.1rem;
+    margin-bottom:.4em;
+  }
+
+  .tagline{
+    font-size:1.15rem;
+    color:var(--ink-soft);
+    margin-bottom:1.6em;
+  }
+
+  .cta-row{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+
+  .btn{
+    display:inline-block;
+    padding:13px 26px;
+    border-radius:var(--radius);
+    text-decoration:none;
+    font-weight:600;
+    font-size:.95rem;
+    border:1px solid transparent;
+    transition:background .15s ease, color .15s ease, border-color .15s ease;
+  }
+
+  .btn-primary{
+    background:var(--blue-deep);
+    color:var(--white);
+  }
+
+  .btn-primary:hover, .btn-primary:focus-visible{
+    background:var(--blue-deep-dark);
+  }
+
+  .btn-secondary{
+    background:transparent;
+    color:var(--blue-deep-dark);
+    border-color:var(--blue-deep);
+  }
+
+  .btn-secondary:hover, .btn-secondary:focus-visible{
+    background:var(--white);
+  }
+
+  /* ---------- Section heading pattern ---------- */
+  .section-head{
+    max-width:560px;
+    margin-bottom:40px;
+  }
+
+  .section-head p{margin-top:.6em;}
+
+  /* ---------- Services ---------- */
+  .services{
+    background:var(--white);
+  }
+
+  .service-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:24px;
+  }
+
+  .service-card{
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:26px 24px;
+    background:var(--white);
+  }
+
+  .service-card .icon{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    background:var(--pink-tint);
+    color:var(--pink-accent);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.3rem;
+    margin-bottom:16px;
+  }
+
+  .service-card h3{
+    font-size:1.08rem;
+    margin-bottom:.4em;
+    color:var(--ink);
+  }
+
+  .service-card p{
+    font-size:.94rem;
+  }
+
+  /* ---------- About ---------- */
+  .about{
+    background:var(--blue-soft);
+  }
+
+  .about-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:48px;
+    align-items:start;
+  }
+
+  .about-copy p{color:var(--ink);}
+
+  .placeholder-note{
+    display:inline-block;
+    margin-top:14px;
+    padding:8px 12px;
+    background:var(--pink-tint);
+    border:1px dashed var(--pink-accent);
+    border-radius:var(--radius);
+    font-size:.85rem;
+    color:#8a4a5f;
+  }
+
+  .image-slot{
+    aspect-ratio:4/3;
+    background:repeating-linear-gradient(45deg, #EEF4F7, #EEF4F7 10px, #E2ECF1 10px, #E2ECF1 20px);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--ink-soft);
+    font-size:.85rem;
+    text-align:center;
+    padding:20px;
+  }
+
+  /* ---------- Contact ---------- */
+  .contact{
+    background:var(--white);
+  }
+
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+  }
+
+  .contact-card{
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:28px;
+  }
+
+  .contact-card h3{
+    font-size:1rem;
+    color:var(--ink);
+    margin-bottom:.8em;
+  }
+
+  .contact-row{
+    display:flex;
+    gap:12px;
+    margin-bottom:14px;
+    font-size:.95rem;
+    color:var(--ink-soft);
+  }
+
+  .contact-row:last-child{margin-bottom:0;}
+
+  .contact-row .glyph{
+    color:var(--blue-deep);
+    flex-shrink:0;
+  }
+
+  .map-slot{
+    aspect-ratio:4/3;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--blue-deep-dark);
+    color:#CFE0E8;
+    padding:40px 0 28px;
+  }
+
+  .footer-grid{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:24px;
+    margin-bottom:24px;
+  }
+
+  footer .brand-text{color:var(--white);}
+  footer .brand-text small{color:#9FBACA;}
+
+  footer nav ul{
+    gap:22px;
+  }
+
+  footer nav a{
+    color:#CFE0E8;
+    border-bottom-color:transparent;
+  }
+
+  footer nav a:hover{
+    color:var(--white);
+    border-bottom-color:var(--pink-accent);
+  }
+
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,.12);
+    padding-top:20px;
+    font-size:.82rem;
+    color:#9FBACA;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 860px){
+    .service-grid{grid-template-columns:repeat(2, 1fr);}
+    .about-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+  }
+
+  @media (max-width: 680px){
+    nav{
+      position:fixed;
+      top:65px;
+      left:0;
+      right:0;
+      background:var(--white);
+      border-bottom:1px solid var(--line);
+      max-height:0;
+      overflow:hidden;
+      transition:max-height .25s ease;
+    }
+    nav.open{max-height:280px;}
+    nav ul{
+      flex-direction:column;
+      gap:0;
+      padding:8px 20px 16px;
+    }
+    nav ul li{border-top:1px solid var(--line);}
+    nav ul li:first-child{border-top:none;}
+    nav a{display:block;padding:14px 0;}
+    .nav-toggle{display:block;}
+    .service-grid{grid-template-columns:1fr;}
+    .hero h1{font-size:1.7rem;}
+    section{padding:48px 0;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-bar">
+    <a href="#top" class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text">Joy Purveyors<small>Medical training Center</small></span>
+    </a>
+    <nav id="site-nav">
+      <ul>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ---------- Hero ---------- -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-inner">
+        <div class="eyebrow-loc">Ndagani, Chuka — 150m from the tarmac towards marine park</div>
+        <h1>Joy Purveyors Medical training Center</h1>
+        <p class="tagline"><i>Empowering Healthcare, Enriching Lives.</i></p>
+        <div class="cta-row">
+          <a href="" class="btn btn-warning">STUDENTS</a>
+          <a href="#contact" class="btn btn-primary">Contact Us</a>
+          <a href="#services" class="btn btn-secondary">Our Services</a>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- Services ---------- -->
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Our Services</h2>
+        <p>Comprehensive care under one roof, from routine consultations to inpatient admission.</p>
+      </div>
+      <div class="service-grid">
+
+        <div class="service-card">
+          <div class="icon" aria-hidden="true">&#128100;</div>
+          <h3>General Outpatient</h3>
+          <p>Walk-in consultations and treatment for everyday illnesses and follow-up care, no admission required.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon" aria-hidden="true">&#127973;</div>
+          <h3>Inpatient Care</h3>
+          <p>Comfortable ward admission and round-the-clock monitoring for patients who need to stay in for treatment.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon" aria-hidden="true">&#129688;</div>
+          <h3>Dentistry</h3>
+          <p>Dental check-ups, treatment, and preventive care for the whole family.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon" aria-hidden="true">&#128118;</div>
+          <h3>Maternity</h3>
+          <p>Antenatal care, delivery, and postnatal support for mothers and newborns.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon" aria-hidden="true">&#129514;</div>
+          <h3>Laboratory &amp; Diagnostics</h3>
+          <p>On-site testing and diagnostic services to support fast, accurate diagnosis.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon" aria-hidden="true">&#128173;</div>
+          <h3>General Doctor Consultations</h3>
+          <p>Access to qualified doctors for check-ups, diagnosis, and treatment planning.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- About ---------- -->
+  <section class="about" id="about">
+    <div class="wrap about-grid">
+      <div class="about-copy">
+        <h2>About Us</h2>
+        <p>Joy Purveyors Medical Center serves Ndagani and the wider Chuka community with accessible outpatient and inpatient care, close to the main tarmac road.</p>
+        <p></p>
+      </div>
+      <img src="images/main/outsideview.jpg" alt="Joy Purveyors Medical Center exterior in Ndagaani, Chuka" class="image-slot">
+    </div>
+  </section>
+
+  <!-- ---------- Contact ---------- -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Contact Us</h2>
+        <p>Get in touch or find us in Ndagani, Chuka.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Reach Us</h3>
+          <div class="contact-row">
+            <span class="glyph" aria-hidden="true">&#128222;</span>
+            <span><b>CALL: </b> +254 733 519526</span>
+          </div>
+          
+          
+          
+          
+          <div class="contact-row">
+            <span class="glyph" aria-hidden="true">&#128231;</span>
+            <span><b>EMAIL:</b> joypurveyorsmedicaltrainingcen@gmail.com</span>
+          </div>
+          <div class="contact-row">
+            <span class="glyph" aria-hidden="true">&#128205;</span>
+            <span><b>LOCATION:</b> Ndagani market, Chuka, Kenya — 150m from the tarmac.</span>
+          </div>
+          <div class="contact-row">
+            <span class="glyph" aria-hidden="true">&#128337;</span>
+            <span><b>OPEN:</b> MON-SUN 24/7</span>
+          </div>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.755701792525!2d37.66180281987738!3d-0.3210059953869247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1827b9c68b663a7b%3A0x7575233100082aba!2sJoy%20Purveyors%20Medical%20Center!5e0!3m2!1sen!2ske!4v1788780388841!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <span class="brand-text">Joy Purveyors Medical Training Center<small>Ndagani, Chuka, Kenya</small></span>
+      <nav>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> Joy Purveyors Medical Training Center. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  var toggle = document.getElementById('nav-toggle');
+  var nav = document.getElementById('site-nav');
+
+  toggle.addEventListener('click', function(){
+    var isOpen = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  nav.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
+</body>
+</html>
